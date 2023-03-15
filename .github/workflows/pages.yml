@@ -8,7 +8,7 @@ permissions:
   contents: write
 
 env:
-  docs_version_path: /
+  docs_version_path: /just-the-docs-dev
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,7 +28,7 @@ jobs:
       #   id: pages
       #   uses: actions/configure-pages@v2
       - name: Build with Jekyll
-        run: bundle exec jekyll build --baseurl "${{ env.docs_version_path }}"
+        run: bundle exec jekyll build --baseurl "/just-the-docs-dev${{ env.docs_version_path }}"
         env:
           JEKYLL_ENV: production
       - name: Deploy
