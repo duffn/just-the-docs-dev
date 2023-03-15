@@ -8,7 +8,7 @@ permissions:
   contents: write
 
 env:
-  docs_version_path: /just-the-docs-dev
+  docs_version_path: /
 jobs:
   build:
     runs-on: ubuntu-latest
