@@ -1,2 +1,0 @@
-# just-the-docs-dev
-
