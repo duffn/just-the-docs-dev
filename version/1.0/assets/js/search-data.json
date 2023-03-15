@@ -1,0 +1,65 @@
+{"0": {
+    "doc": "Configuration",
+    "title": "Configuration",
+    "content": "Create a New Bot Integration . To integrate your bot with Slack, you must first create a new Slack App. OAuth Code Grant . Once created, go to the app’s Basic Info tab and grab the Client ID and Client Secret. You’ll need these in order complete an OAuth code grant flow as described at slack-ruby-bot-server. Using the Legacy API Token . Although OAuth is recommended, you can still generate a legacy API token for your app and use it for some interactions. Slack.configure do |config| config.token = ENV['SLACK_API_TOKEN'] end . This sets a global default token. You can also pass a token into the initializer of both Slack::Web::Client and Slack::RealTime::Client or configure those separately via Slack::Web::Config.configure and Slack::RealTime::Config.configure. The instance token will be used over the client type token over the global default. Global Settings . The following global settings are supported via Slack.configure. | setting | description | . | token | Slack API token. | . | logger | An optional logger, defaults to ::Logger.new(STDOUT) at Logger::WARN level. | . ",
+    "url": "/version/1.0/usage/configuration.html",
+    
+    "relUrl": "/usage/configuration.html"
+  },"1": {
+    "doc": "Examples",
+    "title": "Examples",
+    "content": "Here are some examples of how to use the web client with the Web API. Test Auth . client = Slack::Web::Client.new client.auth_test . Send Messages . Send messages with chat_PostMessage. client.chat_postMessage(channel: '#general', text: 'Hello World', as_user: true) . See a fully working example in examples/hi_web. List Channels . List channels with conversations_list. channels = client.conversations_list.channels general_channel = channels.detect { |c| c.name == 'general' } . Upload a File . Upload a file with files_upload. client.files_upload( channels: '#general', as_user: true, file: Faraday::UploadIO.new('/path/to/avatar.jpg', 'image/jpeg'), title: 'My Avatar', filename: 'avatar.jpg', initial_comment: 'Attached a selfie.' ) . Get Channel Info . You can use a channel ID or name (prefixed with #) in all functions that take a :channel argument. Lookup by name is not supported by the Slack API and the channels_id method called invokes conversations_list in order to locate the channel ID. This invocation can have a cost if you have many Slack channels. In this scenario, we encourage you to use channel id. client.conversations_info(channel: 'C04KB5X4D') # calls conversations_info . client.conversations_info(channel: '#general') # calls conversations_list followed by conversations_info . Get User Info . You can use a user ID or name (prefixed with @) in all functions that take a :user argument. Lookup by name is not supported by the Slack API and the users_id method called invokes users_list in order to locate the user ID. client.users_info(user: 'U092BDCLV') # calls users_info . client.users_info(user: '@dblock') # calls users_list followed by users_info . Search for a User . Constructs an in-memory index of users and searches it. If you want to use this functionality, add the picky gem to your project’s Gemfile. client.users_search(user: 'dblock') . Other . Refer to the Slack Web API Method Reference for the list of all available functions. ",
+    "url": "/version/1.0/usage/web_client/examples.html",
+    
+    "relUrl": "/usage/web_client/examples.html"
+  },"2": {
+    "doc": "Home",
+    "title": "slack-ruby-client",
+    "content": "A Ruby and command-line client for the Slack Web, Real Time Messaging and Event APIs. ",
+    "url": "/version/1.0/#slack-ruby-client",
+    
+    "relUrl": "/#slack-ruby-client"
+  },"3": {
+    "doc": "Home",
+    "title": "Useful to me?",
+    "content": ". | This library will let you send messages to Slack via the Web API, send and receive messages via the Real Time Messaging API and facilitate integration with the Events API. | To respond to slash commands, interactive components or events, implement a web application using your favorite web framework and use this library to call the Slack Web API and to verify that events are coming from Slack. | To build a bot using the Real Time Messaging API, use slack-ruby-bot, which uses this library. | To roll out a complete service using the Real Time Messaging API with Slack button integration to multiple teams, check out slack-ruby-bot-server, which is built on top of slack-ruby-bot, which uses this library. | . ",
+    "url": "/version/1.0/#useful-to-me",
+    
+    "relUrl": "/#useful-to-me"
+  },"4": {
+    "doc": "Home",
+    "title": "Stable Release",
+    "content": "You’re reading the documentation for the next release of slack-ruby-client. Please see the documentation for the last stable release, v2.0.0 unless you’re integrating with HEAD. See UPGRADING when upgrading from an older version. ",
+    "url": "/version/1.0/#stable-release",
+    
+    "relUrl": "/#stable-release"
+  },"5": {
+    "doc": "Home",
+    "title": "Installation",
+    "content": "Add to Gemfile. gem 'slack-ruby-client' . If you’re going to be using the RealTime client, add async-websocket. See below for more information about concurrency. gem 'async-websocket', '~&gt; 0.8.0' . Run bundle install. ",
+    "url": "/version/1.0/#installation",
+    
+    "relUrl": "/#installation"
+  },"6": {
+    "doc": "Home",
+    "title": "Home",
+    "content": " ",
+    "url": "/version/1.0/",
+    
+    "relUrl": "/"
+  },"7": {
+    "doc": "Usage",
+    "title": "Usage",
+    "content": " ",
+    "url": "/version/1.0/usage/usage.html",
+    
+    "relUrl": "/usage/usage.html"
+  },"8": {
+    "doc": "Web Client",
+    "title": "Web Client",
+    "content": "The Slack Web API allows you to build applications that interact with Slack. ",
+    "url": "/version/1.0/usage/web_client/web_client.html",
+    
+    "relUrl": "/usage/web_client/web_client.html"
+  }
+}
