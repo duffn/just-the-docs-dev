@@ -1,0 +1,8 @@
+title: slack-ruby-client
+description: A Ruby and command-line client for the Slack Web, Real Time Messaging and Event APIs.
+theme: just-the-docs
+
+url: https://slack-ruby.github.io/slack-ruby-client
+
+aux_links:
+  GitHub: https://github.com/slack-ruby/slack-ruby-client
