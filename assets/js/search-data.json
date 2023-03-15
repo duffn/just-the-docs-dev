@@ -55,6 +55,13 @@
     
     "relUrl": "/usage/usage.html"
   },"8": {
+    "doc": "Versions",
+    "title": "Versions",
+    "content": ". | head | v1.2.0 | . ",
+    "url": "/just-the-docs-dev/usage/versions.html",
+    
+    "relUrl": "/usage/versions.html"
+  },"9": {
     "doc": "Web Client",
     "title": "Web Client",
     "content": "The Slack Web API allows you to build applications that interact with Slack. ",
