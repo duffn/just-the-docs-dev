@@ -7,8 +7,6 @@ grand_parent: Usage
 
 # Examples
 
-This is in v1.3.0
-
 Here are some examples of how to use the web client with the Web API.
 
 ##### Test Auth
