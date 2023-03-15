@@ -39,7 +39,8 @@ jobs:
           folder: _site # The folder the action should deploy.
           target-folder: ${{ env.docs_version_path }}
           clean: true # Automatically remove deleted files from the deploy branch
-          clean-exclude: '["version"]'
+          clean-exclude: |
+            version/*
       # - name: Upload artifact
       #   uses: actions/upload-pages-artifact@v1
       
