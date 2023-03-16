@@ -57,7 +57,7 @@
   },"8": {
     "doc": "Versions",
     "title": "Versions",
-    "content": ". | head | v1.3.0 | v1.2.0 | . ",
+    "content": "These are the (made up) different versions of the documentation. Versions match slack-ruby-client git tags. | head | v1.3.0 | v1.2.0 | . ",
     "url": "/just-the-docs-dev/usage/versions.html",
     
     "relUrl": "/usage/versions.html"
